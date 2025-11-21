@@ -20,7 +20,7 @@ export default async function MealDetails({ params }) {
         <div className={ styles.headerText }>
           <h1>{ mealBlog.title }</h1>
           <p className={ styles.creator }>
-            by <a href={ `mailto:${ mealBlog.creatorEmail }` }>{ mealBlog.creator }</a>
+            by <a href={ `mailto:${ mealBlog.creator_email }` }>{ mealBlog.creator }</a>
           </p>
           <p className={ styles.summary }>{ mealBlog.summary }</p>
         </div>

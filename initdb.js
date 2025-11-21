@@ -165,6 +165,10 @@ const dummyMeals = [
 ];
 
 db.prepare(`
+   DROP TABLE meals;
+`).run();
+
+db.prepare(`
    CREATE TABLE IF NOT EXISTS meals (
        id INTEGER PRIMARY KEY AUTOINCREMENT,
        slug TEXT NOT NULL UNIQUE,
