@@ -3,6 +3,11 @@ import styles from './page.module.css';
 import { shareMealAction } from '@/lib/server-actions';
 import MealFormSubmit from '@/components/meals/meal-form-submit';
 
+export const metadata = {
+  title: 'Share Meal Page',
+  description: 'This page provides a form for the community to share a recipe',
+};
+
 export default function ShareMealPage() {
 
   return (

@@ -3,6 +3,11 @@ import styles from './page.module.css';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
+export const metadata = {
+  title: 'Shared Meal Details',
+  description: 'This recipe was shared by the community',
+};
+
 export default async function MealDetails({ params }) {
   const { mealSlug } = await params;
   const mealBlog = getMeal(mealSlug);

@@ -31,6 +31,7 @@
 10. [Building for Production](#building-for-production)
     1. [Revalidating the Paths](#revalidating-the-paths)
     2. [Uploading Images to the App Website](#uploading-images-to-the-app-website)
+    3. [Adding metadata Object to Pages](#adding-metadata-object-to-pages)
 
 ---
 
@@ -762,3 +763,16 @@ Although the images are currently uploaded to the `public/images` folder, this *
 ![](./docs/131-production-images-cache.png)
 
 This is not a good place to keep images, even in production. Instead, images should be uploaded to hosted site like AWS S3 or to a website domain directory.
+
+## Adding metadata Object to Pages
+
+A useful cleanup item is to ensure each of the pages have a metadata object that describes the page. For example, the root `page.js` file has this metadata object.
+
+```javascript
+export const metadata = {
+  title: 'Application Home Page',
+  description: 'Welcome to the home page of Onwards Foodies',
+};
+```
+
+It seems pretty meager but it will set the title in the browser tab and within the HTML there will be a `content` tag with the description in it.
